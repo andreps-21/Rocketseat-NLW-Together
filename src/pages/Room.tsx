@@ -56,7 +56,7 @@ export function Room() {
     }
 
     async function handleLikeQuestion(questionId: string) {
-        await database.ref(`rooms/${roomId}/questions/${questionId}/Likes`).push({
+        await database.ref(`rooms/${roomId}/questions/${questionId}/likes`).push({
             authorId: user?.id,
         })
     }
